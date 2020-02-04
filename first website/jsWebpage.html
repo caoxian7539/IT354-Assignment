@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JS Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+	<div class="jumbotron text-center">
+		<h1>Welcome to JS tutorial!</h1>
+		<p>Resize this responsive page to see the effect!</p> 
+    </div>
+	
+	<div class="container-fluid">
+        <div class="row-fluid">
+            <div class="col-md-3 well">
+				<ul class="nav">
+				<h1>My Other Pages</h1>
+				<li><a href="firstWebsite.html">Homepage</a>
+				<li><a href="https://www.youtube.com/watch?v=gqOEoUR5RHg">Bootstrap courses</a>
+				</ul>
+			</div>
+			
+			<div class="col-md-9">
+			<pre>
+			1.Numbers are written with or without decimals:10.5 100, don’t have to initiate them with int, double or float.
+			var a=6, var b=100.102
+			<br>
+			Scientific Notation, var a=1e6 -> 1000000 or 1*10^6
+			var b=1.4e6 -> 1400000 or 1.4*10^6
+
+			2.Unique Numbers
+			Infinity or -Infinity
+			Infinity is useful for knowing when you've gone higher or lower than the largest possible number in JS
+	        Numbers out of (-1.7976931348623157E+10308,1.7976931348623157E+10308) will be defined Infinity or -Infinity
+			<br>
+			3.Strings
+			JavaScript strings are used for storing and manipulating text.
+			var x = "Kobe Bryant", var y='Lebron James', var z=x+y
+			<br>
+			The sequence \"  inserts a double quote in a string:
+			var x = "We are the so-called \"Vikings\" from the north."// We are the so-called "Vikings" from the north.
+			<br>
+
+			4.Unary Operators: typeof
+			typeof
+			This is super helpful when debugging or working with data that changes
+			typeof 2.5 // returns number
+			Unary Operators: Unary Plus, Minus
+			+, -
+			Plus: converts strings of numbers, booleans, and null to numbers
+			Minus: Does the same thing as plus, but negates
+			Unary Operators: Logical Not:!•	
+			Returns the boolean equivalent with negation
+			
+			Unary Operators: delete
+			example: delete myArray[0] // returns true
+			Returns true if it deleted a property or if property doesnt exist
+			Doesn't work with variables and functions...
+			var a=[1,2,3,4,5]
+			delete a[0]
+			<br>
+			5.Hoisting
+			It is when a browser/engine compiles variables and named-functions immediately
+			Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function). In JavaScript, a variable can be declared after it has been used.
+			In other words; a variable can be used before it has been declared.
+	
+			carName = "Volvo"
+			console.log(carName)
+			var carName
+	
+</pre>
+			</div>
+    </div>
+</div>
+	<br>
+	<div class="container">
+		<div style="text-align:center">
+			<p id="videoIntroduce">Next is a video that I made to introduce the tutorial above</p>
+			<video id="video1" width="420" controls>
+				<source src="js_tutorial.mp4" type="video/mp4">
+				<source src="js_tutorial.ogg" type="video/ogg">
+				Your browser does not support HTML5 video.
+			</video>
+			<br></br>
+			<button onclick="playPause()">Play/Pause</button> 
+			<button onclick="makeBig()">Big</button>
+			<button onclick="makeSmall()">Small</button>
+			<button onclick="makeNormal()">Normal</button>
+		</div>
+	</div>
+	
+	<script>
+		var myVideo = document.getElementById("video1"); 
+
+		function playPause() { 
+			if (myVideo.paused) 
+				myVideo.play(); 
+			else 
+				myVideo.pause(); 
+} 
+
+		function makeBig() { 
+				myVideo.width = 560; 
+} 
+
+		function makeSmall() { 
+				myVideo.width = 320; 
+} 
+
+		function makeNormal() { 
+				myVideo.width = 420; 
+} 
+	</script>
+	
+	<style>
+
+body{
+background-image:  linear-gradient(to right top, #d16ba5, #c777b9, 
+#ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, 
+#79b3f4, #69bff8, #52cffe, #41dfff, 
+#46eefa, #5ffbf1);
+} 
+
+h3,h1{
+font-family: 'Lora', Georgia, times, serif;
+}
+#videoIntroduce{
+font-size: 40px;
+
+}
+	</style>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  </body>
+</html>
