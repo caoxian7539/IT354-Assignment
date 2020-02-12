@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>scope</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+	<div class="jumbotron text-center">
+		<h1>Welcome to My Homepage</h1>
+		<p>Resize this responsive page to see the effect!</p> 
+    </div>
+	
+	<div class="container-fluid">
+        <div class="row content">
+            <div class="col-lg-3 well">
+				<h1>Second Website</h1>
+				<ul class="nav nav-pills nav-stacked">
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="secondWebsite.html">JS Lessons of week 3 and week 4<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="Functions.html">Functions</a></li>
+						<li><a href="Scope.html">Scope and nested functions</a></li>
+						<li><a href="Optional.html">Optional arguments</a></li>
+						<li><a href="restParameters.html">Rest parameters</a></li>
+					</ul>
+				</li>
+				<li><a href="secondVideo.html">Second Video</a></li>
+				<li><a href="ECMAscript.html">ECMAscript</a></li>
+				</ul>
+			</div>
+			
+			<div class="col-sm-7">
+			<h3>
+			Each function acts as if it is an island unto itself when it comes to scope.
+			Each scope can look around it for variables to use.</h3>
+				<p>
+				let number=10;<br>
+				const add=function(a){<br>
+					let number=20;<br>
+					return number+a;<br>
+					}add(1);//21, not 11<br>
+				</p>
+			<h3>Nested Functions:</h3>
+			<h4>A function is called “nested” when it is created inside another function.</h4>
+			<h4>Functions have their own scope so they can centralize what they need</h4>
+			<h4>You can also have functions inside of functions</h4>
+			<h4>The outer function can't see in, but the inner function can see the outer function</h4>
+			<p>
+			Const add=function(number){<br>
+				Cons doAddition=function(){<br>
+					total=number+number;<br>
+					return total;<br>
+						}<br>
+				return doAddition();<br>
+			}//the doAddition() function can see the argument of add() function<br>
+			add(5)//10
+			</p>
+	
+			
+			</div>
+		</div>
+	</div>
+	<br>
+	
+	<style>
+
+p{
+font-size:18px;
+text-align:center;
+}
+
+h3,h1{
+font-family: 'Lora', Georgia, times, serif;
+}
+#videoIntroduce{
+font-size: 40px;
+
+}
+	</style>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  </body>
+</html>
