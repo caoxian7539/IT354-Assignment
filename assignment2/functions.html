@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>functions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+	<div class="jumbotron text-center">
+		<h1>Welcome to My Homepage</h1>
+		<p>Resize this responsive page to see the effect!</p> 
+    </div>
+	
+	<div class="container-fluid">
+        <div class="row content">
+            <div class="col-lg-3 well">
+				<h1>Second Website</h1>
+				<ul class="nav nav-pills nav-stacked">
+				<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="secondWebsite.html">JS Lessons of week 3 and week 4<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="Functions.html">Functions</a></li>
+						<li><a href="Scope.html">Scope and nested functions</a></li>
+						<li><a href="Optional.html">Optional arguments</a></li>
+						<li><a href="restParameters.html">Rest parameters</a></li>
+					</ul>
+				</li>
+				<li><a href="secondVideo.html">Second Video</a></li>
+				<li><a href="ECMAscript.html">ECMAscript</a></li>
+				</ul>
+			</div>
+			
+			
+			<div class="col-sm-7">
+			<h3>1.Named Functions：A named function is a function declaration if it appears as a statement. For example:</h3>
+			
+			
+			<p>
+					function add(a,b){<br>
+					return a+b;}
+					
+			</p>	
+			
+			<h3>2.Function Expression: A JavaScript function can also be defined using an expression.</h3>
+			
+			<p><strong>A function expression can be stored in a variable:</strong><p>
+			<p>	
+				var x=function(a,b)	<br>
+				{return a+b;
+				}
+			</p>
+			<p><strong>Also expression can be stored in a verb-noun:</strong></p>
+			<p>	
+				const addTwoNumbers= function(a,b){<br>
+				return a+b;}
+			</p>
+			<h3>
+			3.Arrowow Functions:Arrow functions allow us to write shorter function syntax:</h3>
+			<p>	
+				const add=(a,b)=>{
+					return a+b;<br>
+				}
+				<br>
+
+				Hello=(val) => {<br>
+					return “Hello” + val}
+			</p>
+	
+			
+			</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	
+	<style>
+
+
+p{
+font-size:18px;
+text-align:center;
+}
+h3,h1{
+font-family: 'Lora', Georgia, times, serif;
+}
+#videoIntroduce{
+font-size: 40px;
+
+pre{
+white-space: pre-wrap;
+        word-wrap: break-word;
+        text-align: justify;
+}
+}
+	</style>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  </body>
+</html>
