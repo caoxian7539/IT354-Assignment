@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>object</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+	<div class="jumbotron text-center">
+		<h1>JavaScript Tutorial</h1>
+		<p>I will show you basic knowledge of JS and relevant essays in web design </p>
+    </div>
+	
+	<div class="container-fluid">
+        <div class="row content">
+            <div class="col-lg-3 well">
+				<h1>Third Website</h1>
+				<ul class="nav nav-pills nav-stacked">
+				<li class="dropdown"><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                JS Lesson: object
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="object.html">Homepage</a></li>
+						<li><a href="intro.html">Introduction</a></li>
+						<li><a href="access.html">Accessing and setting objects</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="thirdVideo.html">Third Video</a></li>
+				<li><a href="thirdEssay.html">Third Essay</a></li>
+				</ul>
+			</div>
+			
+			
+			<div class="col-sm-7">
+			<h2>There are many ways to create new object.</h2>
+			<div class="w3-container w3-border w3-large">
+			<h3>1.Creating objects with 'new Object()'</h3>
+			<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+			const myCar=new Object();
+			<br>
+			myCar.name= "Audi";
+			<br>
+			myCar.mode="A4";
+			<br>
+			myCar.color="Black";
+			<br>
+
+			</div>
+			</div>
+			<h4>I created a new object myCar with three name:value pairs.</h4>
+			<h4 style="color: red">Remember that <Strong>'O'</Strong> of 'Object' has to be in uppercase.</4>
+			</div>
+			<br>
+			
+			
+			
+			<div class="w3-container w3-border w3-large">
+			<h3>2.Creating objects with object literals</3>
+			<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+			const myCar={name: "Audi", model: "A4", color: "Black"};
+			<br>
+			</div>
+			</div>
+			<h4>In my opinion, this is the most direct and intuitive way to create an object, and It saves lines and codes.</h4>
+			</div>
+			<br>
+			
+			<div class="w3-container w3-border w3-large">
+			<h3>3.Creating objects with constructors </3>
+			<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+			function myCar(name,model,color){<br>
+			this.name=name;<br>
+			this.model=model;<br>
+			this.color=color;<br>
+			}<br>
+			const oneCar=new myCar("Audi", "A4", "Black");
+			<br>
+			</div>
+			</div>
+			<h4>I created a constructor myCar with three arguments of it. After that, 
+			I created a new object: <b>oneCar</b> of myCar that has its own values corresponding to three arguments</h4>
+			</div>
+			<br>
+			
+			<div class="w3-container w3-border w3-large">
+			<h3>4.Creating objects with classes (special functions): </3>
+			<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+			class myCar{<br>
+			constructor(name,model,color){<br>
+			this.name=name;<br>
+			this.model=model;<br>
+			this.color=color;<br>
+			}}<br>
+			const oneCar=new myCar("Audi", "A4", "Black");
+			<br>
+			</div>
+			</div>
+			<h4>This is much the same as the last one. Notice the key words <Strong>'class'</strong> and <strong>'consturctor'</strong>.</h4> 
+			<h4>Also pay attention to the <b>brace '{}' and bracket '()'.</b></h4>
+			</div>
+
+			
+			
+			</div>
+		</div>
+	</div>
+	<br>
+	
+<style>
+
+
+p{
+font-size:18px;
+text-align:center;
+}
+h3,h1{
+font-family: 'Lora', Georgia, times, serif;
+}
+#videoIntroduce{
+font-size: 40px;
+}
+</style>
+	
+
+  </body>
+</html>

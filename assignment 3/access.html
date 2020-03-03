@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>object</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+	<div class="jumbotron text-center">
+		<h1>JavaScript Tutorial</h1>
+		<p>I will show you basic knowledge of JS and relevant essays in web design </p>
+    </div>
+	
+	<div class="container-fluid">
+        <div class="row content">
+            <div class="col-lg-3 well">
+				<h1>Third Website</h1>
+				<ul class="nav nav-pills nav-stacked">
+				<li class="dropdown"><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                JS Lesson: object
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="object.html">Homepage</a></li>
+						<li><a href="intro.html">Introduction</a></li>
+						<li><a href="create.html">Creating objects</a></li>
+						
+						
+					</ul>
+				</li>
+				<li><a href="thirdVideo.html">Third Video</a></li>
+				<li><a href="thirdEssay.html">Third Essay</a></li>
+				</ul>
+			</div>
+			
+			
+			<div class="col-sm-7">
+			<h2>Here is an example about how I can access and set values of objects</h2>
+			<div class="w3-container w3-border w3-large">
+			<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+			const myCar = {<br>
+			name: "Audi",<br>
+			model : "A4",<br>
+			color : "Black",<br>
+			get showDetails()  {<br>
+			console.log("my name is "+ this.name+ " and my model is "+ this.model);<br>
+			}<br>
+			}<br>
+			myCar.showDetails//<small>my name is Audi and my model is A4</small><br>
+
+			</div>
+			</div>
+			
+			<h4>In an object, you can also set function in it. In the example, I set a showDetails() function,
+			and I can use it to access the values in the object</h4>
+			</div><br>
+			
+			<div class="w3-container w3-border w3-large">
+			<h4>What if I want to change a car?</h4>
+			
+			<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+			myCar.name="Honda";<br>
+			myCar.showDetails;//<small>my name is Honda and my model is A4</small><br>
+			</div>
+			</div>
+			<h4>I can reset the name of myCar to Honda and in showDetails() the output will chage correspondingly</h4>
+			</div>
+			
+		</div>
+	</div>
+	<br>
+	
+<style>
+p{
+font-size:18px;
+text-align:center;
+}
+h3,h1{
+font-family: 'Lora', Georgia, times, serif;
+}
+#videoIntroduce{
+font-size: 40px;
+}
+</style>
+</body>
+</html>
