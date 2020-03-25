@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>fouthVideo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+	<div class="jumbotron text-center">
+		<h1>JavaScript Tutorial</h1>
+		<p>I will show you basic knowledge of JS and relevant essays in web design </p>
+    </div>
+	
+	<div class="container-fluid">
+        <div class="row content">
+            <div class="col-lg-3 well">
+				<h1>Fouth Website</h1>
+				<ul class="nav nav-pills nav-stacked">
+				<li class="dropdown"><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                JS Lesson
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="main.html">Homepage</a></li>
+						<li><a href="proto.html">Prototype Inheritance</a></li>
+						<li><a href="this1.html">`this` in the scope of inheritance</a></li>
+						<li><a href="this2.html">`this` as window and global objects</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="fouthVideo.html">Fouth Video</a></li>
+				<li><a href="fouthEssay.html">Fouth Essay</a></li>
+				</ul>
+			</div>
+			
+			
+			<div class="col-lg-7">
+			<div style="text-align:center">
+			<p id="videoIntroduce">This is a video that talks about prototype inheritance and 'this'</p>
+			<br>
+			<video id="video3" controls>
+				<source src="fouthVideo.mp4" type="video/mp4">
+				<source src="fouthVideo.ogg" type="video/ogg">
+				Your browser does not support HTML5 video.
+			</video>
+			<br></br>
+			<button onclick="playPause()">Play/Pause</button> 
+			</div>
+			</div>
+		</div>
+	</div>
+	<br>
+<style>
+h3,h1{
+font-family: 'Lora', Georgia, times, serif;
+}
+#videoIntroduce{
+font-size: 40px;
+}
+video {
+ width: 100%;
+ height: auto;
+}
+</style>
+</body>
+</html>

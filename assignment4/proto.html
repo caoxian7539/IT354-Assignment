@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>prototype inheritance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+	<div class="jumbotron text-center">
+		<h1>JavaScript Tutorial</h1>
+		<p>I will show you basic knowledge of JS and relevant essays in web design </p>
+    </div>
+	
+	<div class="container-fluid">
+        <div class="row content">
+            <div class="col-lg-3 well">
+				<h1>Fouth Website</h1>
+				<ul class="nav nav-pills nav-stacked">
+				<li class="dropdown"><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                JS Lesson
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="main.html">Homepage</a></li>
+						<li><a href="this1.html">`this` in the scope of inheritance</a></li>
+						<li><a href="this2.html">`this` as window and global objects</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="fouthVideo.html">Fouth Video</a></li>
+				<li><a href="fouthEssay.html">Fouth Essay</a></li>
+				</ul>
+			</div>
+			
+			
+			<div class="col-sm-7">
+			<div class="w3-container w3-border w3-large">
+			<h3>In JS all objects are “bags” for propertires according to the official documentation.</h3>
+
+			<h3>All objects link to a prototype object.</h3>
+
+			<h3>This link from a prototype to the next protytype goes on until desired attribute is on.</h3>
+
+			<br>
+		
+			
+			</div>
+			
+			
+			<div class="w3-example">
+			<h3>Attribute</h3>
+			<div class="w3-code notranslate htmlHigh">
+			function Person(first, last, age, eye) {<br>
+			this.firstName = first;<br>
+			this.lastName = last;<br>
+			this.age = age;<br>
+			this.eyeColor = eye;<br>
+			}<br>
+			var child=new Person("John", "Doe", 50, "blue");<br>
+			console.log(child.age);//50<br>
+			Person.prototype.major="informationsystem";//add a new attribute the the child object<br>
+			console.log(child.major);//informationsystem<br>
+
+			</div>
+			</div>
+			
+			<div class="w3-container w3-border w3-large">
+			<h3>The child object inherit from the person object with its own attributes</3>
+			<h3>Also, you can add a new attribute to the person object if you want, like I add a "major" attribute above</3>
+			</div>
+			
+			<div class="w3-example">
+			<h3>Function</h3>
+			<div class="w3-code notranslate htmlHigh">
+			function Person(first, last, age, eye) {<br>
+			this.firstName = first;<br>
+			this.lastName = last;<br>
+			this.age = age;<br>
+			this.eyeColor = eye;<br>
+			this.getAge=function(){<br>
+			return age;<br>
+			}<br>
+			}<br>
+			var child=new Person("John", "Doe", 50, "blue");<br>
+			console.log(child.getAge());<br>
+			Person.prototype.name = function() {<br>
+			return this.firstName + " " + this.lastName;<br>
+			}<br>
+			console.log(child.name());<br>
+			</div>
+			</div>
+			
+			<div class="w3-container w3-border w3-large">
+			<h3>In the prototype object(person), there is a function getAge(). The child object can inherit this function.</h3>
+			<h3>If you want a new function to do other things, like print the obejct's name, you can add a new function to the prototype object.</h3>
+			</div>
+			<br>
+
+			<div class="w3-container w3-border w3-large">
+			<h3>How class allows us to do less typing (syntactic sugar)</h3>
+			<div class="w3-example">
+			<div class="w3-code notranslate htmlHigh">
+			class Rectangle {<br>
+  constructor(height, width) {<br>
+    this.height = height;<br>
+    this.width = width;<br>
+  }<br>
+  // Getter<br>
+  get area() {<br>
+    return this.calcArea();<br>
+  }<br>
+  // Method<br>
+  calcArea() {<br>
+    return this.height * this.width;<br>
+  }<br>
+}<br>
+
+const square1 = new Rectangle(10, 10);<br>
+const square2 = new Rectangle(20,20);<br>
+console.log(square1.area); // 100<br>
+console.log(square2.area);//400<br>
+
+			</div>
+			</div>
+			<h3>what if I don’t create Rectangle class</h3>
+			<div class="w3-example">
+			<div class="w3-code notranslate htmlHigh">
+			const square1={<br>
+height:10;<br>
+width:10;<br>
+get area(){<br>
+	return this.calcArea();<br>
+}<br>
+calcArea(){<br>
+returen this.height*this.width}<br>
+}<br>
+const square2<br>
+...<br>
+
+
+			</div>
+			</div>
+			<h3>What if I need 100 rectangles? I will have to write lot of useless repeating codes and waste a lot of time</h3>
+			</div>
+			
+			</div>
+		</div>
+	</div>
+	<br>
+	
+<style>
+p{
+font-size:18px;
+text-align:center;
+}
+h3,h1{
+font-family: 'Lora', Georgia, times, serif;
+}
+#videoIntroduce{
+font-size: 40px;
+}
+</style>
+</body>
+</html>
