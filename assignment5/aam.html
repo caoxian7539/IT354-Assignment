@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Advanced Array Methods</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+	<div class="jumbotron text-center">
+		<h1>JavaScript Tutorial</h1>
+		<p>I will show you basic knowledge of JS and relevant essays in web design </p>
+    </div>
+	
+	<div class="container-fluid">
+        <div class="row content">
+            <div class="col-lg-3 well">
+				<h1>Fifth Website</h1>
+				<ul class="nav nav-pills nav-stacked">
+				<li class="dropdown"><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                JS Lesson
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="main.html">Homepage</a></li>
+						<li><a href="module.html">Module</a></li>
+						<li><a href="hof.html">Higher Order Functions</a></li>
+						
+						
+						
+					</ul>
+				</li>
+				<li><a href="fifthVideo.html">Fifth Video</a></li>
+				<li><a href="fifthEssay.html">Fifth Essay</a></li>
+				</ul>
+			</div>
+			
+			
+			<div class="col-sm-7">
+			
+			<div class="w3-container w3-border w3-large">
+			<h2><Strong>Advanced Array Methods</Strong></h2>
+			
+			
+			<h3>Arrays are everywhere, from simple matrices to complex list of objects holding every little detail about each 
+			product on a page. We have to deal with them day to day and often when we operate on them, we write out the same 
+			lines of code instinctively without giving much attention about the possible forms they can take. The way you 
+			write them can determine how easy it is for others to read and understand your implementation.</h3>
+			<h3>Luckily in JavaScript we have some nice built in functions for dealing with arrays that can simplify your code,
+			make it easier to read and in the end, make it easier to debug in case something goes off the rails. These functions 
+			are <Strong>"Advanced Array Methods".</Strong></h3>
+
+			</div><br>
+			
+			<div class="w3-container w3-border w3-large">
+			<h3>Now to demonstrate each and every function we have, we are going to need some data to work with.</h3>
+			<h3>There are two arrays and I am going to do some array operations to them.</h3>
+			<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+			const companies=[<br>
+{name:"one", category: "finance", start: 1981, end: 2003},<br>
+{name:"two", category: "retail", start: 1982, end: 2004},<br>
+{name:"three", category: "auto", start: 1983, end: 2005}<br>
+];<br>
+const ages=[33,12,20,16,5,54,21,44,61,13,15,45,84,23];<br>
+
+			</div>
+			</div>
+			</div>
+			<br>
+			
+			<div class="w3-container w3-border w3-large">
+			<div class="w3-example">
+			<h3>1.Filter</h3>
+			<div class="w3-code notranslate htmlHigh">
+			const canDrink = ages.filter(age=> age >= 21);
+console.log(canDrink);
+			</div>
+			</div>
+			<br>
+			<div class="w3-example">
+			<h3>2.Push</h3>
+			<div class="w3-code notranslate htmlHigh">
+			ages.push(45)
+ console.log(ages);
+			</div>
+			</div>
+			<br>
+						<div class="w3-example">
+			<h3>3.Pop</h3>
+			<div class="w3-code notranslate htmlHigh">
+			 ages.pop();
+ console.log(ages)
+			</div>
+			</div>
+			<br>
+						<div class="w3-example">
+			<h3>4.Find</h3>
+			<div class="w3-code notranslate htmlHigh">
+			let two=companies.find(company=>company.name=="two");
+console.log(two);
+			</div>
+			</div>
+			<br>
+						<div class="w3-example">
+			<h3>5.Sort</h3>
+			<div class="w3-code notranslate htmlHigh">
+			let sortAges=ages.sort();
+console.log(sortAges);
+			</div>
+			</div>
+			<br>
+						<div class="w3-example">
+			<h3>6.Map</h3>
+			<div class="w3-code notranslate htmlHigh">
+			const newAges=ages.map(function(age){
+  return age+1;
+});
+console.log(newAges);
+			</div>
+			</div>
+			<br>
+						<div class="w3-example">
+			<h3>7.Shift</h3>
+			<div class="w3-code notranslate htmlHigh">
+			var newAges2= ages.shift();
+console.log(newAges2);
+console.log(ages);
+			</div>
+			</div>
+			<br>
+						<div class="w3-example">
+			<h3>8.Unshift</h3>
+			<div class="w3-code notranslate htmlHigh">
+			ages.unshift(12);
+console.log(ages);
+			</div>
+			</div>
+			<br>
+			</div>
+			
+			
+			
+		</div>
+	</div>
+	<br>
+	
+<style>
+p{
+font-size:18px;
+text-align:center;
+}
+h3,h1{
+font-family: 'Lora', Georgia, times, serif;
+}
+#videoIntroduce{
+font-size: 40px;
+}
+</style>
+</body>
+</html>

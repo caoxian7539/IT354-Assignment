@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Fifth Essay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+	<div class="jumbotron text-center">
+		<h1>An Essay About Web Design Font Problem</h1>
+    </div>
+	
+	<div class="container-fluid">
+        <div class="row content">
+            <div class="col-lg-3 well">
+				<h1>Fifthth Website</h1>
+				<ul class="nav nav-pills nav-stacked">
+				<li class="dropdown"><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                JS Lesson
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="main.html">Homepage</a></li>
+						<li><a href="module.html">Modules</a></li>
+						<li><a href="hof.html">Higher Order Functions</a></li>
+						<li><a href="aam.html">Advanced Array Methods</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="fifthVideo.html">Fifth Video</a></li>
+				<li><a href="fifthEssay.html">Fifth Essay</a></li>
+				</ul>
+			</div>
+			
+			<div class="col-sm-1">
+			<h1>
+			</h1>
+			</div>
+	
+			
+			<div class="col-sm-5">
+			<h1 style="text-align:center">THE MITT ROMNEY WEB FONT PROBLEM</h1>
+			<div class="w3-container w3-border w3-large">
+			<P>&nbsp&nbsp&nbsp&nbspThere is a font problem in website that is called The Flash of Invisible Text (FOIT),
+			or the browser hides the text while the web font is loading.</p>
+			<P>&nbsp&nbsp&nbsp&nbspThe author wanted to highlight a particular variant of FOIT, which was the 
+			Mitt Romney Web Font Problem. This specific problem occurs when you use multiple weights and styles of the same 
+			typeface together.</p>
+			<P>&nbsp&nbsp&nbsp&nbspHere is what happened: In January, James Muspratt tweeted a image. The headline from 
+			Slate.com was important breaking news about Mitt Romney’s intention to run for President. 
+			The headline was rendered using the Titling Gothing FB typeface but using two different web fonts, 
+			one for bold and one for combination bold and italic. The readers couldn't see the italic variation.
+			</p>
+			<P>&nbsp&nbsp&nbsp&nbsp<Strong>Why did this happen?</Strong> As you may already be aware, each web font incurs its own separate FOIT. 
+			By combining two web fonts together in a single headline, the FOIT has created a race condition that alters the 
+			integrity of the content. A glance at the headline indicates that Mitt Romney is indeed running for President. 
+			When the page finishes loading, the real message is revealed: he is, in fact, not running for President. 
+			Obviously, this is bad, and especially so for a news organization that depends on clarity and accuracy.</p>
+			<P>&nbsp&nbsp&nbsp&nbspIf the font-end developers are unware of this problem, things may be serious. Let's consider situations
+			like this: One website says that Lebron James is not greater than Michael Jordan. Because of FOIT, "not" is gone and
+			the news becomes "Lebron James is greater than Michael Jordan". The topic will be completely different because of this.
+			Situations can be the same for other areas. The views of the author may be totally different because of this font problem</p>
+			<h2><Strong>How to deal with this problem?</Strong></h2>
+			<P>&nbsp&nbsp&nbsp&nbsp1.You can use the font loading solution I’ve been prescribing and documented over at Dev.Opera. 
+			This is by far the easiest method and will eliminate FOIT by switching to unstyled fallback text while the font is 
+			loading.</p>
+			<P>&nbsp&nbsp&nbsp&nbsp2.If you aren’t comfortable with eliminating FOIT, 
+			you can also group your font loads into a single repaint, shown in the Appendix 1 code sample below.</p>
+			<P>&nbsp&nbsp&nbsp&nbsp3.You can also use the previously documented Flash of Faux Text approach, 
+			utilizing font-synthesis to show browser generated bold and italic fallbacks while the real web fonts load.</p>
+			<h2><Strong>WHAT SHOULD WEB BROWSERS DO?</Strong> </h2>
+			<P>&nbsp&nbsp&nbsp&nbspweb browsers should fix this problem natively. They should apply the blocking font-rendering 
+			behavior in a smarter way. The browser knows when it is loading multiple @font-face fonts of the same typeface that have matching font-family properties and vary only by font-weight and font-style.</p>
+			<P>&nbsp&nbsp&nbsp&nbsp</p>
+			<P>&nbsp&nbsp&nbsp&nbsp</p>
+			<P>&nbsp&nbsp&nbsp&nbsp</p>
+			<P>&nbsp&nbsp&nbsp&nbsp</p>
+			</div>
+			
+			</div>
+			</div>
+		</div>
+	<br>
+	
+	<style>
+
+
+p{
+font-size:15px;
+text-align:left;
+}
+h3,h1{
+font-family: 'Lora', Georgia, times, serif;
+}
+#videoIntroduce{
+font-size: 40px;
+}
+pre{
+white-space: pre-wrap;
+        word-wrap: break-word;
+        text-align: justify;
+}
+
+</style>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Modules</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+	<div class="jumbotron text-center">
+		<h1>JavaScript Tutorial</h1>
+		<p>I will show you basic knowledge of JS and relevant essays in web design </p>
+    </div>
+	
+	<div class="container-fluid">
+        <div class="row content">
+            <div class="col-lg-3 well">
+				<h1>Fifth Website</h1>
+				<ul class="nav nav-pills nav-stacked">
+				<li class="dropdown"><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                JS Lesson
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="main.html">Homepage</a></li>
+						<li><a href="hof.html">Higher Order Functions</a></li>
+						<li><a href="aam.html">Advanced Array Methods</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="fifthVideo.html">Fifth Video</a></li>
+				<li><a href="fifthEssay.html">Fifth Essay</a></li>
+				</ul>
+			</div>
+			
+			
+			<div class="col-sm-7">
+			<div class="w3-container w3-border w3-large">
+			<h3>Like a book chapter, modules are just clusters of words</h3>
+
+			<h3>Good modules, however, are highly self-contained with distinct functionality, allowing them to be shuffled, 
+			removed, or added as necessary, without disrupting the system as a whole.</h3>
+			
+			</div>
+			<br>
+			
+			<div class="w3-container w3-border w3-large">
+			<h3>Why are modules so important?</h3>
+			<br>
+			<p>1.Maintainability: By definition, a module is self-contained. A well-designed module aims to lessen the 
+			dependencies on parts of the codebase as much as possible, so that it can grow and improve independently. Updating a single module will not affect other modules.</p>
+			<br>
+			<p>2.Namespacing: In JavaScript, variables outside the scope of a top-level function are global. Sharing global 
+			variables between unrelated code is a big no-no in development. Modules allow us to avoid namespace pollution by 
+			creating a private space for our variables.
+			</p>
+			<p>3.Reusability: let’s imagine you copied some utility methods you wrote from a previous project to your current project.
+			That’s all well and good, but if you find a better way to write some part of that code you’d have to go back and remember to update it everywhere else you wrote it.
+			This is obviously a huge waste of time. It would be much easier if there was a module that we can reuse over and over again.
+			</p>
+			<br>
+			</div>
+			<br>
+			
+			<div class="w3-container w3-border w3-large">
+			<h3>This is an exaple to show how to use modules</h3>
+			<p>In the html, import main.js</p>
+			<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+			script type="module" src="main.js"
+			</div>
+			</div>
+			<br>
+			<p>Then in the user.js file</p>
+			<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+			export default class User{<br>
+	 constructor(name,age){<br>
+		 this.name=name;<br>
+		 this.age=age;<br>
+	 }<br>
+}<br>
+
+export function printNames(user){<br>
+	console.log(`User's name is ${user.name}`)<br>
+	
+}<br>
+
+export function printAge(user){<br>
+	console.log(`User's age is ${user.age} years old`)<br>
+	
+}<br>
+			</div>
+		</div>
+		<br>
+		<p>The html file can't read from user.js file because I don't import it. But it can access user.js by doing this in main.js file</p>
+		<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+			import User, {printName as printUserName} from '/user.js'<br>
+
+const user = new User('Bob',11)<br>
+console.log(user)<br>
+printUserName(user)
+			</div>
+		</div>
+	</div>
+	<br>
+	
+<style>
+p{
+font-size:18px;
+
+}
+h3,h1{
+font-family: 'Lora', Georgia, times, serif;
+}
+#videoIntroduce{
+font-size: 40px;
+}
+</style>
+</body>
+</html>

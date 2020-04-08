@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Higher Order Functions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+	<div class="jumbotron text-center">
+		<h1>JavaScript Tutorial</h1>
+		<p>I will show you basic knowledge of JS and relevant essays in web design </p>
+    </div>
+	
+	<div class="container-fluid">
+        <div class="row content">
+            <div class="col-lg-3 well">
+				<h1>Fifth Website</h1>
+				<ul class="nav nav-pills nav-stacked">
+				<li class="dropdown"><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                JS Lesson
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="main.html">Homepage</a></li>
+						<li><a href="module.html">Module</a></li>
+						<li><a href="aam.html">Advanced Array Methods</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="fifthVideo.html">Fifth Video</a></li>
+				<li><a href="fifthEssay.html">Fifth Essay</a></li>
+				</ul>
+			</div>
+			
+			
+			<div class="col-sm-7">
+			
+			<div class="w3-container w3-border w3-large">
+			<h3>A large program is a costly program, and not just because of the time it takes to build. Size almost 
+			always involves complexity, and complexity confuses programmers. Confused programmers, in turn, introduce 
+			mistakes (bugs) into programs. A large program then provides a lot of space for these bugs to hide, making 
+			them hard to find.</h2>
+			<h3>Let’s briefly look at two example programs . The first is self-contained and six lines long.</h3>
+			<div class="w3-example">
+			<h3>Example1</h3>
+			<div class="w3-code notranslate htmlHigh">
+			let total = 0, count = 1;<br>
+while (count <= 10) {<br>
+  total += count;<br>
+  count += 1;<br>
+}
+console.log(total);<br>
+			</div>
+			</div>
+			<h3>The second relies on two external functions and is one line long.</h3>
+			<div class="w3-example">
+			<h3>Example1</h3>
+			<div class="w3-code notranslate htmlHigh">
+		console.log(sum(range(1, 10)));
+			</div>
+			</div>
+			Which one is more likely to contain a bug?
+
+If we count the size of the definitions of sum and range, the second program is also big—even bigger than the first. 
+But still, I’d argue that it is more likely to be correct.
+
+It is more likely to be correct because the solution is expressed in a vocabulary that corresponds to the problem being 
+solved. Summing a range of numbers isn’t about loops and counters. It is about ranges and sums.
+
+The definitions of this vocabulary (the functions sum and range) will still involve loops, counters, and other incidental 
+details. But because they are expressing simpler concepts than the program as a whole, they are easier to get right.
+			</div>
+			</br>
+			
+			
+			<div class="w3-container w3-border w3-large">
+			<h2><Strong>Abstraction</Strong></h2>
+			<h3>In the context of programming, these kinds of vocabularies are usually called abstractions. Abstractions 
+			hide details and give us the ability to talk about problems at a higher (or more abstract) level.</h3>
+			</div>
+			<br>
+			
+			<div class="w3-container w3-border w3-large">
+			<h2><Strong>Higher-order functions</Strong></h2>
+			<h3>Functions that operate on other functions, either by taking them as <Strong>arguments</Strong> or by <Strong>
+			returning</Strong> them, are called higher-order functions.</h3>
+			<h3>Higher-order functions allow us to abstract over actions, not just values. They come in several forms. For 
+			example, we can have functions that create new functions.</h3>
+			<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+		function greaterThan(n) {<br>
+  return m => m > n;<br>
+}<br>
+let greaterThan10 = greaterThan(10);<br>
+console.log(greaterThan10(11));<br>
+// → true<br>
+			</div>
+			</div>
+			<h3>And we can have functions that change other functions.</h3>
+			<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+			
+		function noisy(f) {<br>
+  return (...args) => {<br>
+    console.log("calling with", args);<br>
+    let result = f(...args);<br>
+    console.log("called with", args, ", returned", result);<br>
+    return result;<br>
+  };<br>
+}<br>
+noisy(Math.min)(3, 2, 1);<br>
+// → calling with [3, 2, 1]<br>
+// → called with [3, 2, 1] , returned 1<br>
+			</div>
+			</div>
+			<h3>We can even write functions that provide new types of control flow.</h3>
+			<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+			function repeat(n, action) {<br>
+  for (let i = 0; i < n; i++) {<br>
+    action(i);<br>
+  }<br>
+}<br>
+	function unless(test, then) {<br>
+  if (!test) then();<br>
+}<br>
+
+repeat(3, n => {<br>
+  unless(n % 2 == 1, () => {<br>
+    console.log(n, "is even");<br>
+  });<br>
+});<br>
+// → 0 is even<br>
+// → 2 is even<br>
+			</div>
+			</div>
+			</div>
+			
+			</div>
+			
+		
+			
+		</div>
+	</div>
+	<br>
+	
+<style>
+
+
+p{
+font-size:18px;
+text-align:center;
+}
+h3,h1{
+font-family: 'Lora', Georgia, times, serif;
+}
+#videoIntroduce{
+font-size: 40px;
+}
+</style>
+	
+
+  </body>
+</html>
