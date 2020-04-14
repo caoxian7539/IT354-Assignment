@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sixth Essay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+	<div class="jumbotron text-center">
+		<h1>An Essay About Node and V8 Engine</h1>
+    </div>
+	
+	<div class="container-fluid">
+        <div class="row content">
+            <div class="col-lg-3 well">
+				<h1>Sixthth Website</h1>
+				<ul class="nav nav-pills nav-stacked">
+				<li class="dropdown"><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                JS Lesson
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="main.html">Homepage</a></li>
+						<li><a href="api.html">API</a></li>
+						<li><a href="rest.html">REST</a></li>
+						<li><a href="post.html">Postman</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="sixthVideo.html">Sixth Video</a></li>
+				<li><a href="sixthEssay.html">Sixth Essay</a></li>
+				</ul>
+			</div>
+			
+			<div class="col-sm-1">
+			<h1>
+			</h1>
+			</div>
+	
+			
+			<div class="col-sm-5">
+			<h1 style="text-align:center">Node.js and V8 Engine</h1>
+			<div class="w3-container w3-border w3-large">
+			<h3>Node.js</h3>
+			<P>&nbsp&nbsp&nbsp&nbspNode.js is an open-source and cross-platform Javascript runtime envirionment.
+			It executes JavaScript code outside of a web browser. Node.js can help developers use JS to write command line tools and for server-side scripting.[1]
+			</p>
+			<P>&nbsp&nbsp&nbsp&nbspNode.js runs the v8 JavaScript engine outside the Googole browser. A Node.js app is run in a single process, without creating extra threads for every request.</p>
+			<P>&nbsp&nbsp&nbsp&nbspWith time passing by, developers have built thousands of libraries upon Node.js that worthing learning. For example: Express, AdonisJs, hapi, Angular, Meteor, ect..</p>
+			<br>
+			<h3>V8 Engine</h3>
+			<P>&nbsp&nbsp&nbsp&nbspV8 is the name of the JAVASCRIPT engine that powers Google chrome. We can understand like this: V8 provides the runtime environment in which JAVASCRIPT executes. And the browser provides the DOM, and other web platform APIs.</p>
+			<P>&nbsp&nbsp&nbsp&nbsp The first version of the V8 engine was released at the same time as the first version of Chrome: September 2, 2008 in order to increase the performance of JAVASCRIPT execution inside web browsers. </p>
+		    <P>&nbsp&nbsp&nbsp&nbspBefore version 5.9 of V8 came out (released earlier this year), the engine used two compilers: full-codegen and Crankshaft</p>
+			<P>&nbsp&nbsp&nbsp&nbspIn 2016, in order to reduce the memory usage on small memory Android phones, the Ignition interpreter was added to V8. </p>
+			<P>&nbsp&nbsp&nbsp&nbspIn 2017, V8 shipped a brand-new compiler pipeline, consisting of Ignition (the interpreter) and TurboFan (the optimizing compiler). Starting with V8 version 5.9, Full-codegen and Crankshaft are no longer used in V8 for JavaScript execution, since the team believes they are no longer able to keep pace with new JavaScript language features and the optimizations those features require.[2]</p>
+			<br>
+			<h3>How Node utilizes V8 engine?</h3>
+			<P>&nbsp&nbsp&nbsp&nbspBefore this let's get some fundamentals about computers first.
+			All of our computers consist of microprocessors. Microprocessors are michine components that receive instructions and electrical signals. The instructions are machine languages that the microprocessors can interpret. Most languages we use today are advanced languages and the microprocessors don't recognize. In order to make the microprocessor understand the languages we use, the browser has to convert the advanced language into machine language.</p>
+			<P>&nbsp&nbsp&nbsp&nbspNow let's go back to the V8 engine: V8 is a powerful open source Javascript engine provided by Google. It is a program that converts Javascript code into lower level or machine code that microprocessors can understand. This is where Node can utilize V8 engine.</p>
+			<br>
+			<h3>Interesting fingdings</h3>
+			<p>&nbsp&nbsp&nbsp&nbspI am curious by the different languages I encountered when I did research on V8 engine. Why there are different languages on various levels and how to use them?</p>
+			<p>&nbsp&nbsp&nbsp&nbspA high-level language is easy for programmers to write and understand. Programmers can use simple and easy syntax to address a specific task. Examples: Python, C, C++</p>
+			<p>&nbsp&nbsp&nbsp&nbspAssembly language falls between a high-level programming language and Machine language. it has syntaxes similar to English, but more difficult than high-level programming languages. To program in assembly language, one should have understood at hardware level like computer architecture, registers, etc.</p>
+			<p>&nbsp&nbsp&nbsp&nbspMachine language is the binary language that is easily understood by computers but difficult for programmers.  Hence it can be directly executed by CPU with absolutely no need of compilers and interpreters. Machine language has a high efficiency when executed by CPU.</p>
+			<p>&nbsp&nbsp&nbsp&nbspIn this era, few programmers will learn machine languages because it's difficult to learn and the efficiency to write is low. With the help of compiliers and interpreters, programmers can use high-level languages to write codes efficiently.</p>
+			</div>
+			<br>
+
+			<div class="w3-container w3-border w3-large">
+			<h3 style="text-align: center">Reference</h3>
+			<h4><a href="https://nodejs.dev/introduction-to-nodejs">[1]Introduction to Node.js, https://nodejs.dev/introduction-to-nodejs</a></h4>
+			<h4><a href="https://en.wikipedia.org/wiki/V8_(JavaScript_engine)">[2]V8 (JavaScript engine), https://en.wikipedia.org/wiki/V8_(JavaScript_engine)</a></h4>		
+			</div>
+
+			</div>
+			</div>
+		</div>
+	<br>
+	
+	<style>
+
+
+p{
+font-size:15px;
+text-align:left;
+}
+h3,h1{
+font-family: 'Lora', Georgia, times, serif;
+}
+#videoIntroduce{
+font-size: 40px;
+}
+pre{
+white-space: pre-wrap;
+        word-wrap: break-word;
+        text-align: justify;
+}
+
+</style>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  </body>
+</html>

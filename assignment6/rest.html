@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>REST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+	<div class="jumbotron text-center">
+		<h1>JavaScript Tutorial</h1>
+		<p>I will show you basic knowledge of JS and relevant essays in web design </p>
+    </div>
+	
+	<div class="container-fluid">
+        <div class="row content">
+            <div class="col-lg-3 well">
+				<h1>Sixth Website</h1>
+				<ul class="nav nav-pills nav-stacked">
+				<li class="dropdown"><button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                JS Lesson
+				</button>
+					<ul class="dropdown-menu">
+						<li><a href="main.html">Homepage</a></li>
+						<li><a href="api.html">API</a></li>
+						<li><a href="post.html">Postman</a></li>
+						
+					</ul>
+				</li>
+				<li><a href="sixthVideo.html">Sixth Video</a></li>
+				<li><a href="sixthEssay.html">Sixth Essay</a></li>
+				</ul>
+			</div>
+			
+			
+			<div class="col-sm-7">
+			<h2 style="text-align: center">What Is REST?</h2>
+			<div class="w3-container w3-border w3-large">
+			<h3>Representational State Transfer</h3>
+			<h3>Architectural style for distributed hypermedia systems and was first presented by Roy Fielding in 2000</h3>
+			<h3>Relies on a stateless, client-server protocol, mostly HTTP</h3>
+			<h3>Treats server objects as resources that can be created or destroyed</h3>
+			<h3>Can be used by virtually any programming language[1]</h3>
+			<h3>Like any other architectural style, REST also does have it’s own 6 guiding constraints which must be satisfied if an interface needs to be referred as RESTful.[2] These principles are :<br> 
+			&nbsp&nbsp1.Client–server<br> 
+			&nbsp&nbsp2.Stateless <br> 
+			&nbsp&nbsp3.Cacheable <br> 
+			&nbsp&nbsp4.Uniform interface <br> 
+			&nbsp&nbsp5.Layered system<br> 
+			&nbsp&nbsp6.Code on demand (optional)<br> </h3>
+			<h3>I will be confused when looking at so many CS terminology. To better explain, in my oppinon, API is the messenger between the client and the user. REST lets us use HTTP request to format our messages. Therefore, RESTful APIs refers to APIs that conform to the REST constraints. </h3>
+			</div>
+			<br>
+
+			<div class="w3-container w3-border w3-large">
+			<h3>As I mentioned above, REST lets up use HTTP request. So it's important to know what requests can users do. The mostly used HTTP methods are listed below.</h3>
+			<h3>HTTP Methods:</h3>
+			<h3>GET: Retrieve data from a specified recourse</h3>
+			<h3>POST: Submit data to be processed to a specified recourse</h3>
+			<h3>PUT: Update a specified resource</h3>
+			<h3>DELETE: Delete a specified resourse</h3>
+			</div>
+			<br>
+
+			<div class="w3-container w3-border w3-large">
+			<h3>Next is am example of RESTful api created by me:</h3>
+			<div class="w3-example">
+			<h3>Example</h3>
+			<div class="w3-code notranslate htmlHigh">
+			const express = require('express');<br>
+const app = express();<br>
+
+const courses = [<br>
+{id:1, name:'english'},<br>
+{id:2, name:'math'},<br>
+{id:3, name:'computer'},<br>
+]<br>
+<br>
+app.get('/', (req, res) => {<br>
+	res.send('hello world!!!');<br>
+});<br>
+<br>
+app.get('/api/courses', (req,res) => {<br>
+	res.send(courses);<br>
+});<br>
+<br>
+
+app.get('/api/courses/:id', (req, res) => {<br>
+	let course = courses.find(c => c.id === parseInt(req.params.id));<br>
+	if(!course) res.status(404).send('the course is not found')//404<br>
+	res.send(course);<br>
+
+});<br>
+<br>
+const port = process.env.PORT || 3000;<br>
+app.listen(port, ()=> console.log(`listening on port ${port}`));<br>
+			</div>
+			</div>
+			<h3>I created a 'courses' object, and there are three courses in it with IDs and names.<br> This is just a simple part of it, and realizes the function to search for courses. For example, if I want to search for the course with id '1', I can enter 'http://localhost:3000/api/courses/1' in the Postman(which will be talked about next chapter) and the result will be shown:</h3>
+			<p><img src="images/eg.jpg"></p>
+			</div>
+			<br>
+
+			<div class="w3-container w3-border w3-large">
+			<h3 style="text-align: center">Reference</h3>
+			<h4><a href="https://www.youtube.com/watch?v=Q-BpqyOT3a8">[1]What Is Rest,https://www.youtube.com/watch?v=Q-BpqyOT3a8</a></h4>
+			<h4><a href="https://restfulapi.net">[2]REST API Tutorial, https://restfulapi.net</a></h4>		
+			</div>
+
+
+			</div>
+			
+			
+
+			</div>
+			</div>
+			
+		
+			
+		</div>
+	</div>
+	<br>
+	
+<style>
+
+
+p{
+font-size:18px;
+text-align:center;
+}
+h3,h1{
+font-family: 'Lora', Georgia, times, serif;
+}
+#videoIntroduce{
+font-size: 40px;
+}
+</style>
+	
+
+  </body>
+</html>

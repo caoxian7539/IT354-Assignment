@@ -1,0 +1,18 @@
+What are they?
+Describe REST
+What is Postman and why use it?
+Show personally written code (snippets and/or screenshots) showing that an API can do. Be sure to tell me what the point of the API is and what the goal of it is too.
+
+
+
+Make a video of an API.
+
+It can serve a website. If it does make it an html website that at least has three pages you can navigate (also, don't make it plain text).
+
+- or - 
+
+It can serve data back. You can use Postman or some other means to retrieve information from it.
+
+ 
+
+Databases are optional, but if you forego one you must have some kind of Object that stands in place of database (otherwise...what information are you trying serve?)
